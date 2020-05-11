@@ -1,5 +1,8 @@
 <?php
 
+namespace app\controllers;
+use app\IRequest;
+use app\Router;
 
 class HomeController
 {

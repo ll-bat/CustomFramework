@@ -1,13 +1,11 @@
 <?php
-require_once __DIR__.'/Router.php';
-require_once __DIR__.'/Request.php';
-require_once __DIR__.'/controllers/HomeController.php';
+require_once __DIR__.'/vendor/autoload.php';
 
+use app\controllers\HomeController;
+use app\Router;
+use app\Request;
 
-
-
-$request = new Request();
-$route = new Router($request);
+$route = new Router(new Request());
 $route->get('/', 'home');
 $route->get('/about', 'about');
 $route->get('/contact', [HomeController::class, 'contact']);

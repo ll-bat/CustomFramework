@@ -1,5 +1,5 @@
 <?php
-include_once 'IRequest.php';
+namespace app;
 
 class Request implements IRequest
 {
